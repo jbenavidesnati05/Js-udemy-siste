@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicios con Dom</title>
+</head>
+<body>
+    <!-- _____________________CSS3______________________________________________  -->
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+    <h1 id="cabecero" class="azul" >Ejemplo con el Dom con Javascript</h1>
+    <p id="parrafo" class="azul">Saludos!</p>
+    <p id="parrafo2" class="azul">parrafo2</p>
+    <!-- _____________________JAVASCRIPT______________________________________________  -->
+    <script>
+        // _________________innerHTML________________________________________
+        // codigo para acceder a los id 
+        // 1. declaramos una variable 
+        // FORMA 1 
+        // let cabecero = document.getElementById("cabecero").innerHTML;
+        // console.log(`Trayendo h1 texto desde html a la consola con JS ====> ${cabecero}`);
+        // FORMA 2 
+        // let parrafo  = document.getElementById("parrafo".innerHTML);
+        // console.log(`Trayendo p texto desde html a la consola con JS ====> ${parrafo}`);
+        
+        // 2. cambiamos el texto desde js hacia html con =====> innerHTML
+        // parrafo.innerHTML = 'cambiando lo que antes habia en parrafo';
+        // cabecero.innerHTML = "cambiando cabecero desde js";
+
+        // _________________getElemenentsBytagName________________________________________
+        let parrafos = document.getElementsByTagName("p");
+        console.log(`cantidad de parrafos ===> ${parrafos.length}`)
+
+        for(let i=0; i<parrafos.length; i++){
+            console.log(`Parrafo ${i+1} ${parrafos[i].innerHTML}`);
+        }
+        // _________________getElemenentsByClassName________________________________________
+        let elementos = document.getElementsByClassName("azul");
+        console.log(`cantidad de elementos ===> ${elementos.length}`);
+
+        for(let i=0; i<elementos.length; i++){
+            console.log(`Elementos ${i+1} ${elementos[i].innerHTML}`);
+        }
+        // _________________querySelectorAll________________________________________
+        let elementosQuery = document.querySelectorAll("p.azul");
+        console.log(`la cantidad de elementosQuery son: ${elementosQuery.length}`)
+
+
+</script>
+</body>
+</html>

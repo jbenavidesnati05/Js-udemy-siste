@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evento onload</title>
+  </head>
+  <!-- _________________________HTML______________________  -->
+<body onload="entrar()">
+    <h1 id="titulo">Manejo del Dom con JS</h1>
+    <br />
+    <div id="mostrar">
+
+    </div>
+    <!-- ______________________JAVASCRIPT______________________  -->
+    <script>
+        function entrar(){
+            alert("entrando a la pagina web");
+            texto = " ";
+            if(navigator.cookieEnabled){
+                texto = "cookies estan habilitadas";
+            }
+            else{
+                texto = "cookies NO estan habilitadas";
+            }
+            document.getElementById("mostrar").innerHTML= texto;
+        }
+    </script>
+</body>
+</html>

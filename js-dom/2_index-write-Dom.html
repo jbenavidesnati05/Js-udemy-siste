@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document.write en JS</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="titulo">manejo dom con js</h1>
+      <button onclick="mostrar()">Mostrar</button>
+      <button onclick="cambiar()">Cambiar</button>
+    </div>
+    <div>
+      <img id="imagen" src="javascript.png" alt="" />
+    </div>
+
+    <!-- ______________________JAVASCRIPT______________________________ -->
+    <script>
+      function mostrar() {
+        // document.write("saludos de JS");
+        document.getElementById("imagen").src = "html5.png";
+      }
+
+      function cambiar(){
+        document.getElementById("imagen").src ="javascript.png"
+      }
+
+      // document.getElementById("titulo").innerHTML += "<br/> nuevo texto"
+    </script>
+  </body>
+</html>

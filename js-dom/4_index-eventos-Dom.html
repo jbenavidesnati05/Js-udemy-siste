@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Dom y JS</title>
+  </head>
+  <!-- ______________________HTML5______________________________ -->
+  <body>
+    <h1 onclick="cambiarTexto(this)">
+      Manejo de enventos y dom con Javascript
+    </h1>
+    <button onclick="mostrar()">Mostrar</button>
+    <!-- ______________________JAVASCRIPT______________________________ -->
+    <script>
+      function cambiarTexto(titulo) {
+        titulo.innerHTML = "cambiamos el texto con el innerHTML";
+      }
+      cambiarTexto("cambiamos el texto con el innerHTML");
+    </script>
+  </body>
+</html>

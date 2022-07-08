@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios con Dom</title>
+</head>
+<body>
+    <!-- _____________________CSS3______________________________________________ -->
+    <style>
+        body{
+            background: rgb(84,98,219);
+            background: radial-gradient(circle, rgba(84,98,219,0.6867749419953597) 26%,
+            rgba(177, 219, 217, 0.616) 84%);        }
+    </style>
+    <!-- _____________________BODY - HTML5_____________________________________________ -->
+    <form id="formulario">
+        <label for="#" name="nombre">Nombre:</label>
+        <input type="text" name="nombre" value="Juan">
+        <br>
+        <label for="#" name="apellido">Apellido</label>
+        <input type="text" name="apellido" value="Perez">
+        <br>
+    </form>
+    <button onclick="mostrarValores()" >Mostrar</button>
+    <div id="valores">
+
+    </div>
+    <!-- _____________________JAVASCRIPT__________________________________________ -->
+    <script>
+        function mostrarValores(){
+            let formulario=document.forms["formulario"];
+            let texto = " ";
+            // CODIGO PARA ACCEDER A TODO EL ARREGLO DEL FORMULARIO 
+            // for(let elemento of formulario){
+            //     texto += elemento.value + "<br>";
+            // }
+            // console.log(texto);
+            // CODIGO PARA ACCEDER A UN SOLO FORMULARIO 
+            let nombre = formulario["nombre"];
+            let apellido = formulario["apellido"];
+            texto = nombre.value +" "+apellido.value;
+            document.getElementById("valores").innerHTML = texto;
+        }
+    </script>
+</body>
+</html>

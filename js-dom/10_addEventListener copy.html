@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10_addEventListener</title>
+  </head>
+  <!-- _________________________HTML______________________  -->
+<body >
+    <h1 id="titulo">10_addEventListener</h1>
+    <label for="">nombre</label>
+    <input type="text" id="nombre">
+    <br>
+    <label for="">apellido</label>
+    <input type="text" id="apellido">
+    <!-- ______________________JAVASCRIPT______________________  -->
+    <script>
+      document.getElementById("nombre").addEventListener("focus",cambiar)
+      document.getElementById("nombre").addEventListener("blur",regresar)
+
+      document.getElementById("apellido").addEventListener("blur",regresar)
+      document.getElementById("apellido").addEventListener("focus",cambiar)
+
+      function cambiar(evento){
+        let componente = evento.target;
+        componente.style.background ="red"
+      }
+      function regresar(evento){
+        evento.target.style.background = "green"
+      }
+
+
+      
+   </script>
+</body>
+</html>
